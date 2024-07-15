@@ -62,7 +62,10 @@ class TFollowServer(Node):
     def handle_follow_turtle(self, req, response):
         self.get_logger().info("handle_follow_turtle called")
         self.leader_name = req.leader
-        response.status = "ok"
+        if self.leader_name in self.received_turtle_names:
+            response.status = "ok"
+        else:
+            response.status = f"This turtle does'nt exist choose one on the list: \n {self.received_turtle_names}"
         topic_name = f'/{self.leader_name}/pose'
         self.get_logger().info(f"Subscribing to leader's topic: {topic_name}")
 
@@ -101,7 +104,7 @@ class TFollowServer(Node):
     def steering_angle(self, goal_pose,pose):
         return atan2(goal_pose.y - pose.y, goal_pose.x - pose.x)
 
-    def angular_vel(self, goal_pose,pose, constant=6):
+    def angular_vel(self, goal_pose,pose, constant=3):
         return constant * (self.steering_angle(goal_pose,pose) - pose.theta)
     
     
