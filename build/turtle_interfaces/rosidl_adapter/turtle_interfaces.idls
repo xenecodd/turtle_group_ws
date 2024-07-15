@@ -1,0 +1,3 @@
+/home/eypan/turtle_follow_ws/build/turtle_interfaces/rosidl_adapter/turtle_interfaces:srv/TurtleCreate.idl
+/home/eypan/turtle_follow_ws/build/turtle_interfaces/rosidl_adapter/turtle_interfaces:srv/TurtleFollow.idl
+/home/eypan/turtle_follow_ws/build/turtle_interfaces/rosidl_adapter/turtle_interfaces:msg/StringArray.idl

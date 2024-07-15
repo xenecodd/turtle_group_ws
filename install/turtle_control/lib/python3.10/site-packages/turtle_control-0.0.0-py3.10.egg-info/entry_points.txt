@@ -1,0 +1,6 @@
+[console_scripts]
+client = turtle_control.TurtleClientNode:main
+followClient = turtle_control.TFollowClient:main
+followServer = turtle_control.TFollowServer:main
+server = turtle_control.TurtleServerNode:main
+

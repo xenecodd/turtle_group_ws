@@ -1,0 +1,27 @@
+[1.254s] Invoking command in '/home/eypan/turtle_follow_ws/src/turtle_control': PYTHONPATH=/home/eypan/turtle_follow_ws/build/turtle_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/eypan/turtle_follow_ws/install/turtle_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtle_control build --build-base /home/eypan/turtle_follow_ws/build/turtle_control/build install --record /home/eypan/turtle_follow_ws/build/turtle_control/install.log --single-version-externally-managed install_data
+[1.752s] running egg_info
+[1.753s] writing ../../build/turtle_control/turtle_control.egg-info/PKG-INFO
+[1.753s] writing dependency_links to ../../build/turtle_control/turtle_control.egg-info/dependency_links.txt
+[1.753s] writing entry points to ../../build/turtle_control/turtle_control.egg-info/entry_points.txt
+[1.754s] writing requirements to ../../build/turtle_control/turtle_control.egg-info/requires.txt
+[1.754s] writing top-level names to ../../build/turtle_control/turtle_control.egg-info/top_level.txt
+[1.757s] reading manifest file '../../build/turtle_control/turtle_control.egg-info/SOURCES.txt'
+[1.759s] writing manifest file '../../build/turtle_control/turtle_control.egg-info/SOURCES.txt'
+[1.759s] running build
+[1.760s] running build_py
+[1.760s] copying turtle_control/TFollowServer.py -> /home/eypan/turtle_follow_ws/build/turtle_control/build/lib/turtle_control
+[1.760s] running install
+[1.761s] running install_lib
+[1.762s] copying /home/eypan/turtle_follow_ws/build/turtle_control/build/lib/turtle_control/TFollowServer.py -> /home/eypan/turtle_follow_ws/install/turtle_control/lib/python3.10/site-packages/turtle_control
+[1.764s] byte-compiling /home/eypan/turtle_follow_ws/install/turtle_control/lib/python3.10/site-packages/turtle_control/TFollowServer.py to TFollowServer.cpython-310.pyc
+[1.766s] running install_data
+[1.766s] running install_egg_info
+[1.770s] removing '/home/eypan/turtle_follow_ws/install/turtle_control/lib/python3.10/site-packages/turtle_control-0.0.0-py3.10.egg-info' (and everything under it)
+[1.770s] Copying ../../build/turtle_control/turtle_control.egg-info to /home/eypan/turtle_follow_ws/install/turtle_control/lib/python3.10/site-packages/turtle_control-0.0.0-py3.10.egg-info
+[1.771s] running install_scripts
+[1.808s] Installing client script to /home/eypan/turtle_follow_ws/install/turtle_control/lib/turtle_control
+[1.809s] Installing followClient script to /home/eypan/turtle_follow_ws/install/turtle_control/lib/turtle_control
+[1.809s] Installing followServer script to /home/eypan/turtle_follow_ws/install/turtle_control/lib/turtle_control
+[1.809s] Installing server script to /home/eypan/turtle_follow_ws/install/turtle_control/lib/turtle_control
+[1.809s] writing list of installed files to '/home/eypan/turtle_follow_ws/build/turtle_control/install.log'
+[1.852s] Invoked command in '/home/eypan/turtle_follow_ws/src/turtle_control' returned '0': PYTHONPATH=/home/eypan/turtle_follow_ws/build/turtle_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/eypan/turtle_follow_ws/install/turtle_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtle_control build --build-base /home/eypan/turtle_follow_ws/build/turtle_control/build install --record /home/eypan/turtle_follow_ws/build/turtle_control/install.log --single-version-externally-managed install_data

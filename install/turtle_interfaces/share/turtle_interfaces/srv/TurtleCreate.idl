@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from turtle_interfaces/srv/TurtleCreate.srv
+// generated code does not contain a copyright notice
+
+
+module turtle_interfaces {
+  module srv {
+    struct TurtleCreate_Request {
+      int32 num;
+    };
+    struct TurtleCreate_Response {
+      string status;
+    };
+  };
+};

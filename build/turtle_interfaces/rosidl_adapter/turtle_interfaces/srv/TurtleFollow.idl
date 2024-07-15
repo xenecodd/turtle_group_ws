@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from turtle_interfaces/srv/TurtleFollow.srv
+// generated code does not contain a copyright notice
+
+
+module turtle_interfaces {
+  module srv {
+    struct TurtleFollow_Request {
+      string leader;
+    };
+    struct TurtleFollow_Response {
+      string status;
+    };
+  };
+};
