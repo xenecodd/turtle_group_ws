@@ -27,6 +27,7 @@ class TFollowServer(Node):
 
     def goal_pose_callback(self,goal):
         self.goal_pose = goal
+        
     
     def create_publishers(self):
         for i in self.received_turtle_names:
@@ -54,7 +55,7 @@ class TFollowServer(Node):
         vel_msg.angular.y = float(0)
         vel_msg.angular.z = self.angular_vel(self.goal_pose,pose)
         publisher = self.cmd_vel_publishers[turtle]
-        if self.received_turtle_names[turtle] != self.leader_name:
+        if self.leader_name and self.received_turtle_names[turtle] != self.leader_name:
             publisher.publish(vel_msg)
 
         
