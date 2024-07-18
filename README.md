@@ -2,10 +2,11 @@
 
 ## Kullanım Talimatları
 
-1. İlk olarak, aşağıdaki komutları terminale yazarak TurtleCreate ve TurtleFollow servislerini başlatın:
+1. İlk olarak, aşağıdaki komutları ayrı terminallere yazarak ilk olarak turtlesim_node düğümünü, TurtleCreate ve TurtleFollow servislerini başlatın:
     ```sh
-    ros2 run turtle_control server
-    ros2 run turtle_control followServer
+    rosrun turtlesim turtlesim_node
+    rosrun turtle_control TurtleServerNode.py
+    rosrun turtle_control TFollowServer.py
     ```
 
 2. Daha sonra, aşağıdaki komutu kullanarak istediğiniz turtlebot sayısını belirterek istemciyi başlatın:
