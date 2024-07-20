@@ -11,7 +11,7 @@ class TFollowClient(Node):
         super().__init__("TFollowClient")
         self.cli = self.create_client(
             TurtleFollow, "turtle_follow")      #Created client for /turtle_follow service
-        while not self.cli.wait_for_service(timeout_sec=1.1):       # Wait for service to answer the request
+        while not self.cli.wait_for_service(timeout_sec=1.1):       # Wait for service to answer the request if it doesn't print "service is not available, waiting..."
             self.get_logger().info("service is not available, waiting...")
         self.req = TurtleFollow.Request()     #Create req object for send request to server-side
          

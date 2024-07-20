@@ -72,7 +72,8 @@ class TFollowServer(Node):
         self.goal_publisher.publish(self.goal_pose)
 
     def name_callback(self, msg):  # Update the list with received turtle names
-        self.received_turtle_names = msg.data
+        for message in msg.data:
+            self.received_turtle_names.append(message)
         self.get_logger().info(f'Received turtle names: {self.received_turtle_names}')
         self.create_publishers()
         self.create_subscriptions()
