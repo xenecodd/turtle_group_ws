@@ -10,25 +10,25 @@ class TFollowClient(Node):
     def __init__(self):
         super().__init__("TFollowClient")
         self.cli = self.create_client(
-            TurtleFollow, "turtle_follow")
-        while not self.cli.wait_for_service(timeout_sec=1.1):
+            TurtleFollow, "turtle_follow")      #Created client for /turtle_follow service
+        while not self.cli.wait_for_service(timeout_sec=1.1):       # Wait for service to answer the request
             self.get_logger().info("service is not available, waiting...")
-        self.req = TurtleFollow.Request()     
+        self.req = TurtleFollow.Request()     #Create req object for send request to server-side
          
         
-    def select_leader_turtlebot(self):
-        self.req.leader = input("Leader turtlebot name: ")
-        self.future = self.cli.call_async(self.req)
-        rclpy.spin_until_future_complete(self, self.future)
+    def select_leader_turtlebot(self):        #Callback that sends leader name to server
+        self.req.leader = input("Leader turtlebot name: ")     
+        self.future = self.cli.call_async(self.req)         #Makes an asynchronous service call using the client (self.cli).
+        rclpy.spin_until_future_complete(self, self.future) #Spins the ROS node until the asynchronous call is completed. Essentially waits for the service response.
         return self.future.result()
         
         
     
 def main():
     rclpy.init()
-    cli = TFollowClient()
-    response = cli.select_leader_turtlebot()
-    cli.get_logger().info("%s" % response.status)
+    cli = TFollowClient()                          # Create an instance of the TFollowClient
+    response = cli.select_leader_turtlebot()       # Call the select_leader_turtlebot method and store the response
+    cli.get_logger().info("%s" % response.status)  # Log the status of the respons
     cli.destroy_node()
     
 
